@@ -78,5 +78,27 @@
             <a href="faq.html" class="footer-btn">FAQ</a>
         </div>
     </footer>
+    <script>
+        document.getElementById("register-form").addEventListener("submit", function(event) {
+            // Prevent default form submission behavior
+            event.preventDefault();
+
+            // Get form data
+            const formData = new FormData(event.target);
+
+            // Submit form data to questionnaire.html page using POST method
+            fetch('questionnaire.html', {
+                method: 'POST',
+                body: formData
+            }).then(response => {
+                // Handle response
+                console.log('Form submitted successfully');
+                // Optionally, redirect to another page after successful submission
+                window.location.href = 'questionnaire.html';
+            }).catch(error => {
+                console.error('Error submitting form:', error);
+            });
+        });
+    </script>
 </body>
 </html>
