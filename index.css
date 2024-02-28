@@ -86,6 +86,10 @@ body {
     color: #fff;
     padding: 20px;
     text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 .footer-buttons {
