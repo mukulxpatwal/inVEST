@@ -68,6 +68,11 @@
                     <span class="error" id="confirm-password-error"></span>
                 </div>
                 <button type="submit">Sign Up</button>
+                <button type="button" onclick="loginWithGoogle()">
+                    <img src="google-logo.png" alt="Google Logo" class="google-logo"> Sign Up with Google
+                </button>
+
+
             </form>
             <p>Already a member? <a href="login.html">Login</a></p>
         </div>
@@ -79,26 +84,34 @@
         </div>
     </footer>
     <script>
+        // Function to handle login with Google
+        function loginWithGoogle() {
+            // Implement your Google login logic here
+            alert('Logging in with Google...');
+        }
+    
+        // Form submission event listener (for registration form)
         document.getElementById("register-form").addEventListener("submit", function(event) {
             // Prevent default form submission behavior
             event.preventDefault();
-
+    
             // Get form data
             const formData = new FormData(event.target);
-
+    
             // Submit form data to questionnaire.html page using POST method
-            fetch('questionnaire.html', {
+            fetch('chooseadvisor.html', {
                 method: 'POST',
                 body: formData
             }).then(response => {
                 // Handle response
                 console.log('Form submitted successfully');
                 // Optionally, redirect to another page after successful submission
-                window.location.href = 'questionnaire.html';
+                window.location.href = 'chooseadvisor.html';
             }).catch(error => {
                 console.error('Error submitting form:', error);
             });
         });
     </script>
+    
 </body>
 </html>

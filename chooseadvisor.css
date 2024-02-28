@@ -42,56 +42,32 @@ body {
     background-color: #555;
 }
 
-.login-section {
+.advisor-selection {
+    padding: 20px;
+    text-align: center;
+}
+
+.advisor-list {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    flex-wrap: wrap;
 }
 
-.login-form {
-    background-color: #fff;
-    color: #000;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 80%; /* Adjusted width */
-    max-width: 400px; /* Maximum width */
-}
-
-.login-form h2 {
+.advisor {
     text-align: center;
-    margin-bottom: 20px;
+    margin: 10px;
 }
 
-.form-group {
-    margin-bottom: 15px;
+.advisor img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-group input[type="text"],
-.form-group input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box; /* Ensure padding is included in width */
-}
-
-.form-group input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-.button-group {
-    text-align: center;
-}
-
-button {
-    padding: 10px 20px;
+.select-btn {
+    padding: 8px 20px;
     background-color: #000;
     color: #fff;
     border: none;
@@ -99,16 +75,9 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.select-btn:hover {
     background-color: #333;
 }
-
-.google-logo {
-    width: 10px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Add some spacing between the logo and the text */
-}
-
 
 .footer {
     background-color: #000;
@@ -121,9 +90,13 @@ button:hover {
     width: 100%;
 }
 
+
+
 .footer-buttons {
     display: flex;
     justify-content: center;
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
 }
 
 .footer-btn {

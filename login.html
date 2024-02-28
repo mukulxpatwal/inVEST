@@ -39,6 +39,9 @@
                 </div>
                 <div class="button-group">
                     <button type="submit">Log In</button>
+                    <button type="button" onclick="loginWithGoogle()">
+                        <img src="google-logo.png" alt="Google Logo" class="google-logo"> Sign Up with Google
+                    </button>                
                 </div>
             </form>
         </div>
@@ -50,6 +53,13 @@
         </div>
     </footer>
     <script>
+        // Function to handle login with Google
+        function loginWithGoogle() {
+            // Implement your Google login logic here
+            alert('Logging in with Google...');
+        }
+    
+        // Form submission event listener (for login form)
         document.getElementById("login-form").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent default form submission
             
@@ -57,7 +67,7 @@
             const formData = new FormData(event.target);
             const username = formData.get('username');
             const password = formData.get('password');
-
+    
             // Perform login validation (e.g., check credentials against database)
             // For demonstration purposes, assuming credentials are valid
             // Replace the condition with your actual login validation logic
@@ -70,5 +80,6 @@
             }
         });
     </script>
+    
 </body>
 </html>
