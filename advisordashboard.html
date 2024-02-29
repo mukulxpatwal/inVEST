@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advisor Dashboard - Investment Advisor Portal</title>
+    <link rel="stylesheet" href="advisordashboard.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <img src="logo.jfif" alt="Company Logo" class="logo">
+                <span class="company-name">inVEST</span>
+            </div>
+            <div class="navbar-right">
+                <a href="index.html" class="btn">Logout</a>
+            </div>
+        </nav>
+    </header>
+    <section class="bg">
+        <section class="welcome-section">
+            <h2>Welcome to Dashboard</h2>
+        </section>
+        <section class="main-section">
+            <div class="left-section">
+                <div class="card" id="profile">
+                    <img src="advisor1.jpg" alt="Profile Picture" class="profile-pic">
+                    <h3>Preeti Zende</h3>
+                    <p>Mumbai, India</p>
+                    <a href="editadvisorprofile.html" class="edit-profile-btn">Edit Profile</a>
+                </div>
+                <div class="card" id="investment-plans">
+                    <h3>Investment Plans</h3>
+                    <ul>
+                        <li>Plan 1</li>
+                        <li>Plan 2</li>
+                        <li>Plan 3</li>
+                    </ul>
+                    <a href="addplan.html" class="add-plan-btn">ADD PLAN</a>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="card" id="graph">
+                    <!-- Placeholder for graph image -->
+                    <img src="advisor-graph.png" alt="Advisor Graph" id="graph">
+                </div>
+                <div class="card" id="investment-info">
+                    <h3>Investment Info</h3>
+                    <ul>
+                        <!-- List of clients' investment information goes here -->
+                        <li>Client 1: Investment Amount</li>
+                        <li>Client 2: Investment Amount</li>
+                        <li>Client 3: Investment Amount</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </section>
+    <footer class="footer">
+        <div class="footer-buttons">
+            <a href="aboutus.html" class="footer-btn">About Us</a>
+            <a href="faq.html" class="footer-btn">FAQ</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get all investment plan links
+            const planLinks = document.querySelectorAll('#investment-plans ul li a');
+            // Attach event listeners to each plan link
+            planLinks.forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    // Prevent default link behavior
+                    event.preventDefault();
+                    // Extract plan information from the clicked link
+                    const planName = link.textContent.trim();
+                    // Store plan information in localStorage
+                    localStorage.setItem('selectedPlan', planName);
+                    // Redirect to addplan.html
+                    window.location.href = 'addplan.html';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
