@@ -47,12 +47,34 @@ section {
     padding: 20px;
 }
 
+/* Section styles */
 .why-choose-us {
     background-color: #000; /* Change background color to black */
     color: #fff; /* Change text color to white */
     text-align: center; /* Center align text */
     padding: 50px 20px; /* Add padding */
     margin-bottom: 20px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align cards */
+}
+
+.card {
+    background-color: #444; /* Darker grey for cards */
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(33.33% - 20px); /* Adjust width to fit three cards in a row */
+    box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+    .card {
+        width: calc(50% - 20px); /* Adjust width to fit two cards in a row for smaller screens */
+    }
 }
 
 
@@ -69,12 +91,12 @@ section {
 }
 
 .user-experience {
-    background-color: #333;
-    color: #fff;
+    background-color: #222; /* Dark grey for user experience cards */
+    color: #fff; /* White text */
     padding: 20px;
     margin: 10px;
     border-radius: 5px;
-    width: calc(50% - 20px);
+    width: calc(100% - 20px); /* Make cards full width */
     box-sizing: border-box;
 }
 
@@ -103,7 +125,7 @@ section {
 }
 
 .card {
-    background-color: #f0f0f0;
+    background-color: #222121;
     border-radius: 5px;
     padding: 20px;
     margin: 10px;

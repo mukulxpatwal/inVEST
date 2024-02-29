@@ -106,14 +106,14 @@
             const formData = new FormData(event.target);
     
             // Submit form data to questionnaire.html page using POST method
-            fetch('chooseadvisor.html', {
+            fetch('welcomepage.html', {
                 method: 'POST',
                 body: formData
             }).then(response => {
                 // Handle response
                 console.log('Form submitted successfully');
                 // Optionally, redirect to another page after successful submission
-                window.location.href = 'chooseadvisor.html';
+                window.location.href = 'welcomepage.html';
             }).catch(error => {
                 console.error('Error submitting form:', error);
             });
