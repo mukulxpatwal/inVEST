@@ -84,7 +84,7 @@ body {
 .footer {
     background-color: #000;
     color: #fff;
-    padding: 20px;
+    /* padding: 20px; */
     text-align: center;
     position: fixed;
     bottom: 0;
@@ -253,15 +253,6 @@ body {
     border-radius: 20px; /* Rounded corners */
 }
 
-.footer {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
 
 .footer-buttons {
     display: flex;
