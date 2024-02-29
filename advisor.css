@@ -1,11 +1,20 @@
-body {
+/* Resetting default margin and padding */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #736f6f;
-    color: #fff;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("wel-img.jfif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    min-height: 100vh; /* Ensure the body fills the viewport height */
+
+}
 
 /* Navbar styles */
 .navbar {
@@ -32,22 +41,6 @@ body {
     display: flex;
     align-items: center;
 }
-.profile-btn img {
-    width: 40px; /* Adjust width as needed */
-    height: 40px; /* Adjust height as needed */
-    border-radius: 50%;
-}
-
-.profile-btn {
-    padding: 8px 20px;
-    background-color: transparent;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-right: 10px;
-    border: none;
-    cursor: pointer;
-}
 
 .btn {
     padding: 8px 20px;
@@ -55,36 +48,65 @@ body {
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+    margin-right: 10px;
 }
 
 .btn:hover {
     background-color: #555;
 }
 
-.welcome-section {
-    text-align: center;
-    /* padding: 20px 0; */
+.profile-btn img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
-.invest-text {
-    font-size: 36px;
-    color: #fff;
-    font-weight: bold;
-    /* text-transform: uppercase; */
-}
-
-
-.advisors-section, .articles-section {
+/* Advisor section styles */
+.advisor-section {
     padding: 20px;
 }
-
-.cards-container {
+.advisor-pic {
+    border-radius: 10px; /* Adjust the value to control the roundness of the borders */
+}
+.advisor-info {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center align cards */
+    justify-content: space-between;
 }
 
-.card {
+.advisor-details {
+    text-align: center;
+}
+
+.ratings {
+    margin-bottom: 10px;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
+}
+
+
+.portfolio-details {
+   
+    text-align: justify; /* Align text to the right */
+    width: 50%;
+    margin: auto; /* Center horizontally */
+}
+
+/* Plans section styles */
+.plans-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.plans-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.plan-card {
     background-color: #333;
     color: #fff;
     padding: 20px;
@@ -94,21 +116,15 @@ body {
     box-sizing: border-box;
     text-align: center;
     flex: 0 1 calc(20% - 20px); /* Adjust width of each card */
-    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
-    text-decoration: none; /* Remove underline from the card text */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-.card:hover {
-    background-color: #555; /* Change background color on hover */
+.plan-card:hover {
+    background-color: #555;
 }
 
-.card img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
+/* Footer styles */
 .footer {
     background-color: #000;
     color: #fff;
@@ -148,8 +164,4 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-.star {
-    width: 2px;
-    height: 2px;
 }
